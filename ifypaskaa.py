@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 import scipy.stats as sp
 import csv
-from math import sin, acos, sqrt
+from math import sin, acos, sqrt, pi
 
 # Initialize constant values here
 
@@ -61,6 +61,28 @@ def readData(file, delimiter=";"):
                 continue
 
             tmp.append(line)
+
+
+def transform3D(data):
+
+    x = []
+    y = []
+    z = []
+
+    try:
+        for i, j, k in data:
+            i = i.replace(",", ".")
+            j = j.replace(",", ".")
+            k = k.replace(",", ".")
+
+            x.append(float(i))
+            y.append(float(j))
+            z.append(float(k))
+
+        return x, y, z
+
+    except ValueError:
+        print("Invalid data: {}, {}, {}".format(z, y, z))
 
 
 def transform2D(data):
