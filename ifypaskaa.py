@@ -193,7 +193,7 @@ def example():
 
         ################################################################
         # This is the main part. n represents the current measure.
-        # Here is example of visualizing a process made for two pieces.
+        # Here is an example of visualization of  two processes.
         ################################################################
 
         # Read and modify data and store it to these values
